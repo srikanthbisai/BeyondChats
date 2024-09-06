@@ -3,6 +3,8 @@ import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import AvTimerIcon from "@mui/icons-material/AvTimer";
 import ForumIcon from "@mui/icons-material/Forum";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import {
   TextField,
   Select,
@@ -38,9 +40,10 @@ function Main() {
           </p>
         </div>
 
-        <div className="imageContainer flex justify-center items-center space-x-10">
+        <div className="imageContainer flex justify-center items-center space-x-6">
           <Button variant="outlined">GUIDED TOUR</Button>
-          <p>SELECT ORG</p>
+          <p className="text-xl font-semibold">SELECT ORG</p>
+           < ExpandMoreIcon sx={{color:"blue", fontSize:"32px"}}/>
           <img src="profile.png" alt="Profile" />
         </div>
       </header>
@@ -121,8 +124,8 @@ function Main() {
           <div>Actions</div>
         </div>
       </div>
+ 
 
-      
     </div>
   );
 }
