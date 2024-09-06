@@ -41,10 +41,10 @@ function Main() {
         </div>
 
         <div className="imageContainer flex justify-center items-center space-x-6">
-          <Button variant="outlined">GUIDED TOUR</Button>
+          <Button variant="outlined" sx={{paddingX:2, paddingY:1, border:"2px solid blue", color:"blue", fontStyle:"thick"}}>GUIDED TOUR</Button>
           <p className="text-xl font-semibold">SELECT ORG</p>
            < ExpandMoreIcon sx={{color:"blue", fontSize:"32px"}}/>
-          <img src="profile.png" alt="Profile" />
+          <img src="profile.png" alt="Profile"/>
         </div>
       </header>
 
