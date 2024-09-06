@@ -1,6 +1,8 @@
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import AddIcon from '@mui/icons-material/Add';
+import AvTimerIcon from '@mui/icons-material/AvTimer';
+import ForumIcon from '@mui/icons-material/Forum';
 
 function Main() {
   return (
@@ -13,15 +15,31 @@ function Main() {
          </div>
 
          <div className="imageContainer flex justify-center items-center space-x-10">
-         <button className="rounded-md border border-blue-800 text-blue-800 p-3 tracking-wide">GUIDED TOUR</button>
+         <Button variant="outlined" >GUIDED TOUR</Button>
          <p>SELECT ORG</p>
          <img src="profile.png" alt="" />
          </div>
      </header>
 
-     <main>
-        
+     <main className='flex justify-center items-center space-x-4 mt-4'>
+     <Button variant="contained" startIcon={<AddIcon />}>
+        ADD DATA
+      </Button>
+      <Button variant="contained" startIcon={<AvTimerIcon />}>
+        DATA TRAINING STATUS
+      </Button>
+      <Button variant="contained" startIcon={<ForumIcon />}>
+       GROUND TRUTHS
+      </Button>
      </main>
+
+     <div className='w-1/2 mx-auto'>
+      <hr style={{ border: '1px solid black', margin: '20px 0' }} />
+    </div>
+
+    <hero className="flex justify-center items-center space-x-4 mt-4"> 
+      
+    </hero>
     </div>
   )
 }
