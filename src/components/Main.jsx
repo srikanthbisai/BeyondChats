@@ -3,18 +3,24 @@ import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import AvTimerIcon from "@mui/icons-material/AvTimer";
 import ForumIcon from "@mui/icons-material/Forum";
-import { TextField, Select, MenuItem, FormControl, InputLabel } from "@mui/material";
+import {
+  TextField,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+} from "@mui/material";
 
 function Main() {
   // State for the Select component
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = React.useState("");
 
   // Handle change for Select component
   const handleChange = (event) => {
     setValue(event.target.value);
   };
 
-  const numbers = [1,2,3,4,5,6,7,8,9,10,20,50];
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 50];
 
   return (
     <div className="flex-grow">
@@ -90,14 +96,33 @@ function Main() {
             onChange={handleChange}
             label="Results"
           >
-            {numbers.map((num,index)=>(
-             <MenuItem key={num} value={num}>{num}</MenuItem>
+            {numbers.map((num, index) => (
+              <MenuItem key={num} value={num}>
+                {num}
+              </MenuItem>
             ))}
           </Select>
         </FormControl>
 
-        <button></button>
+        <Button
+          variant="contained"
+          sx={{ width: 160, padding: 1, fontSize: 18 }}
+        >
+          SEARCH
+        </Button>
       </div>
+
+      <div className="w-full flex p-4 rounded-lg border border-gray-200 mt-10">
+        <div className="textContainer w-3/4 text-lg">Data</div>
+        <div className="gridContainer w-1/4 grid grid-cols-4 text-lg">
+          <div>Source</div>
+          <div>Type</div>
+          <div>Created</div>
+          <div>Actions</div>
+        </div>
+      </div>
+
+      
     </div>
   );
 }
